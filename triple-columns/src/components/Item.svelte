@@ -1,5 +1,12 @@
 <script>
     export let data;
+    let isHovered = false;
+    const mouseenterHandler = () => {
+        isHovered = true;
+    };
+    const mouseleaveHandler = () => {
+        isHovered = false;
+    };
 </script>
 
 <div class="item" style="background-color: {data.color}">
@@ -13,7 +20,15 @@
         <p>{data.description}</p>
     </div>
     <div class="item-button">
-        <button style="color: {data.color}">Learn More</button>
+        <button
+            style="color: {isHovered
+                ? 'white'
+                : data.color}; background-color: {isHovered
+                ? data.color
+                : 'white'}"
+            on:mouseenter={mouseenterHandler}
+            on:mouseleave={mouseleaveHandler}>Learn More</button
+        >
     </div>
 </div>
 
@@ -23,6 +38,7 @@
         display: flex;
         flex-direction: column;
         height: 500px;
+        min-width: 300px;
     }
     .item-icon {
         margin-bottom: 20px;
@@ -45,9 +61,11 @@
     }
     .item-button > button {
         border-radius: 30px;
-        border: none;
+        border: 2px solid white;
         font-family: "Lexend Deca", sans-serif;
         padding: 18px 30px;
         font-size: 18px;
+        cursor: pointer;
+        transition: color 0.3s, background-color 0.3s;
     }
 </style>
