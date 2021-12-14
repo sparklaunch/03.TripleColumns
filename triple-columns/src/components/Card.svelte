@@ -20,4 +20,13 @@
         transform: translate(-50%, -50%);
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
     }
+    @media screen and (max-width: 1440px) {
+        #card {
+            flex-direction: column;
+            position: relative;
+            transform: translate(-50%, 0);
+            width: 400px;
+            margin: 50px 0;
+        }
+    }
 </style>

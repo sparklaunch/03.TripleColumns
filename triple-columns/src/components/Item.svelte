@@ -68,4 +68,9 @@
         cursor: pointer;
         transition: color 0.3s, background-color 0.3s;
     }
+    @media screen and (max-width: 1440px) {
+        .item {
+            height: 400px;
+        }
+    }
 </style>
