@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
     export let data;
-    let isHovered = false;
-    const mouseenterHandler = () => {
+    let isHovered: boolean = false;
+    const mouseenterHandler: () => void = () => {
         isHovered = true;
     };
-    const mouseleaveHandler = () => {
+    const mouseleaveHandler: () => void = () => {
         isHovered = false;
     };
 </script>

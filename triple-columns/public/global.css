@@ -4,3 +4,7 @@
     box-sizing: border-box;
     transition: ease all 0.5s;
 }
+html,
+body {
+    height: 100%;
+}

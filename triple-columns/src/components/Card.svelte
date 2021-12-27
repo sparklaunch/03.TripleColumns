@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Item from "./Item.svelte";
     export let data;
 </script>
@@ -25,8 +25,7 @@
             flex-direction: column;
             position: relative;
             transform: translate(-50%, 0);
-            width: 400px;
-            margin: 50px 0;
+            width: 90%;
         }
     }
 </style>
